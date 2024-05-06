@@ -1,0 +1,15 @@
+Terminal 1:
+    docker-compose up -d
+
+    docker-compose exec mysql bash
+     mysql -uroot -p products
+     Enter password: root
+      create table products (id varchar(255), name varchar(255), price float);
+
+Terminal 2:
+    docker-compose exec kafka bash
+     kafka-topics --bootstrap-server=localhost:9092 --topic=product --create
+
+Terminal 3:
+    docker-compose exec goapp bash
+     go run cmd/app/main.go 
