@@ -13,3 +13,20 @@ Terminal 2:
 Terminal 3:
     docker-compose exec goapp bash
      go run cmd/app/main.go 
+
+
+Para teste no Postmain:
+
+Post - http://localhost:8000/products
+{
+    "name": "My Product 3",
+    "price": 103
+}
+
+Retorno:
+{
+    "ID": "09938983-c496-479e-a50c-c8853483998a",
+    "Name": "My Product 3",
+    "Price": 103
+}
+
